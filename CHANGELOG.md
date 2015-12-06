@@ -1,4 +1,5 @@
 ### HEAD
+* Update to PHP 7.0 and remove HHVM ([#432](https://github.com/roots/trellis/pull/432))
 * Add pre-flight checks for common deploy problems ([#459](https://github.com/roots/trellis/pull/459))
 * Prevent duplicate hosts entries made by `vagrant-hostsupdater` ([#458](https://github.com/roots/trellis/pull/458))
 * Fix README's `ansible-playbook` command for server.yml ([#456](https://github.com/roots/trellis/pull/456))
