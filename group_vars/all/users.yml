@@ -1,5 +1,5 @@
 # Documentation: https://roots.io/trellis/docs/ssh-keys/
-admin_user: admin
+admin_user: ubuntu
 
 # Also define sudoer_passwords in group_vars/<environment>/main.yml
 users:
@@ -7,14 +7,12 @@ users:
     groups:
       - "{{ web_group }}"
     keys:
-      - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
-      # - https://github.com/username.keys
+      - "{{ lookup('file', '~/.ssh/cimo-wordpress-server-web.pub') }}"
   - name: "{{ admin_user }}"
     groups:
       - sudo
     keys:
-      - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
-      # - https://github.com/username.keys
+      - "{{ lookup('file', '~/.ssh/cimo-wordpress-server-admin.pub') }}"
 
 web_user: web
 web_group: www-data
