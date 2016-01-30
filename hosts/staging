@@ -2,7 +2,13 @@
 # List each machine only once per [group], even if it will host multiple sites.
 
 [staging]
-your_server_ip
+52.72.96.100
+
+[staging:vars]
+# ansible_ssh_private_key_file=~/.ssh/cimo-wordpress.pem
 
 [web]
-your_server_ip
+52.72.96.100
+
+[web:vars]
+ansible_ssh_private_key_file=~/.ssh/cimo-wordpress-server-web
