@@ -23,8 +23,8 @@ wordpress_sites:
       wp_home: http://staydry.dev
       wp_siteurl: http://staydry.dev/wp
       wp_env: development
-      db_name: example_dev
-      db_user: example_dbuser
+      db_name: staydry_dev
+      db_user: staydry_dev_dbuser
       # db_password: (defined in group_vars/development/vault.yml)
   # hollyandjohn.ca:
   #   site_hosts:
