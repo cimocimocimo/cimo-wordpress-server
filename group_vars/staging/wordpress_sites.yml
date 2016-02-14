@@ -2,6 +2,7 @@
 wordpress_sites:
   staydrysystems.com:
     site_hosts:
+      - staging.staydrysystems.com
       - staydry-staging.cimolini.com
     local_path: ../../Sites/staydrysystems.com # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:cimocimocimo/staydrysystems.com.git
@@ -18,8 +19,8 @@ wordpress_sites:
       duration: 30s
     env:
       disable_wp_cron: true
-      wp_home: http://staydry-staging.cimolini.com
-      wp_siteurl: http://staydry-staging.cimolini.com/wp
+      wp_home: http://staging.staydrysystems.com
+      wp_siteurl: http://staging.staydrysystems.com/wp
       wp_env: staging
       db_name: staydry_staging_db
       db_user: staydry_staging_dbuser

@@ -5,8 +5,10 @@
 52.71.163.30
 
 [production:vars]
-ansible_ssh_private_key_file=~/.ssh/cimo-wordpress.pem
+# ansible_ssh_private_key_file=~/.ssh/cimo-wordpress.pem
 
 [web]
 52.71.163.30
 
+[web:vars]
+ansible_ssh_private_key_file=~/.ssh/cimo-wordpress-server-web
