@@ -32,6 +32,7 @@ wordpress_sites:
     local_path: ../../Sites/hollyandjohn.ca
     site_install: true
     site_title: Holly & John Real Estate
+    # db_import: ../../Sites/sqldumps/hollyandjohn.sql
     admin_user: admin
     admin_email: aaron@cimolini.com
     initial_permalink_structure: /%postname%/ # applied only at time of WP install and when `site_install: true`

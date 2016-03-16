@@ -34,3 +34,36 @@ wordpress_sites:
       # secure_auth_salt:
       # logged_in_salt:
       # nonce_salt:
+
+  hollyandjohn.ca:
+    site_hosts:
+      - staging.hollyandjohn.ca
+    local_path: ../../Sites/hollyandjohn.ca
+    repo: git@github.com:cimocimocimo/hollyandjohn.ca.git
+    branch: master
+
+    multisite:
+      enabled: false
+      subdomains: false
+    ssl:
+      enabled: false
+    cache:
+      enabled: false
+      duration: 30s
+    env:
+      disable_wp_cron: true
+      wp_home: http://staging.hollyandjohn.ca
+      wp_siteurl: http://staging.hollyandjohn.ca/wp
+      wp_env: staging
+      db_name: hollyandjohn_staging_db
+      db_user: hollyandjohn_staging_dbuser
+      # Define the following variables in group_vars/staging/vault.yml
+      # db_password:
+      # auth_key:
+      # secure_auth_key:
+      # logged_in_key:
+      # nonce_key:
+      # auth_salt:
+      # secure_auth_salt:
+      # logged_in_salt:
+      # nonce_salt:
