@@ -12,6 +12,9 @@ wordpress_sites:
     multisite:
       enabled: false
       subdomains: false
+    htpasswd:
+      name: staydry
+      password: SuperSecret
     ssl:
       enabled: false
     cache:
@@ -45,6 +48,9 @@ wordpress_sites:
     multisite:
       enabled: false
       subdomains: false
+    htpasswd:
+      name: hollyandjohn
+      password: CityOfGardens
     ssl:
       enabled: false
     cache:
