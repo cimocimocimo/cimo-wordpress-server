@@ -1,4 +1,7 @@
 # Documentation: https://roots.io/trellis/docs/local-development-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/development/vault.yml
+
 wordpress_sites:
   staydrysystems.com:
     site_hosts:
@@ -12,9 +15,9 @@ wordpress_sites:
     initial_permalink_structure: /%postname%/ # applied only at time of WP install and when `site_install: true`
     multisite:
       enabled: false
-      subdomains: false
     ssl:
       enabled: false
+      provider: self-signed
     cache:
       enabled: false
       duration: 30s
@@ -51,4 +54,3 @@ wordpress_sites:
       wp_env: development
       db_name: hollyandjohn_dev
       db_user: hollyandjohn_dev_dbuser
-
