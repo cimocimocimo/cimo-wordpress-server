@@ -1,3 +1,11 @@
+### HEAD
+* Add connection-related cli options to ping command ([#578](https://github.com/roots/trellis/pull/578))
+* Wrap my.cnf password in quotes ([#577](https://github.com/roots/trellis/pull/577))
+* Update to WP-CLI v0.23.1 ([#576](https://github.com/roots/trellis/pull/576))
+* Fix #563 - Improve remote databases ([#573](https://github.com/roots/trellis/pull/573))
+* Fix #569 - Only skip subdomains for non-www domains ([#570](https://github.com/roots/trellis/pull/570))
+* Enable Let's Encrypt to transition http sites to https ([#565](https://github.com/roots/trellis/pull/565))
+
 ### 0.9.7: April 10th, 2016
 * Fix #550 - Properly skip permalink setup for MU ([#551](https://github.com/roots/trellis/pull/551))
 * Escape salts and keys to avoid templating errors ([#548](https://github.com/roots/trellis/pull/548))
