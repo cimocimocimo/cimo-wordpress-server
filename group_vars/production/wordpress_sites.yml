@@ -5,6 +5,7 @@
 wordpress_sites:
   staydrysystems.com:
     site_hosts:
+      - staydrysystems.com
       - www.staydrysystems.com
       - staydry-production.cimolini.com
     local_path: ../../Sites/staydrysystems.com # path targeting local Bedrock site directory (relative to Ansible root)
@@ -14,7 +15,7 @@ wordpress_sites:
       enabled: false
     ssl:
       enabled: false
-      provider: letsencrypt
+      provider: self-signed
     cache:
       enabled: true
       duration: 30s
@@ -38,6 +39,7 @@ wordpress_sites:
   hollyandjohn.ca:
     site_hosts:
       - hollyandjohn.ca
+      - www.hollyandjohn.ca
       - production.hollyandjohn.ca
     local_path: ../../Sites/hollyandjohn.ca
     repo: git@github.com:cimocimocimo/hollyandjohn.ca.git
