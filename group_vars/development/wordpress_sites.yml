@@ -29,6 +29,32 @@ wordpress_sites:
       db_name: staydry_dev
       db_user: staydry_dev_dbuser
       # db_password: (defined in group_vars/development/vault.yml)
+  staydry-old.com:
+    site_hosts:
+      - staydry-old.dev
+    local_path: ../../Sites/staydry-old.com # path targeting local Bedrock site directory (relative to Ansible root)
+    site_install: true
+    site_title: StayDry Systems
+    admin_user: admin
+    # admin_password: (defined in group_vars/development/vault.yml)
+    admin_email: aaron@cimolini.com
+    initial_permalink_structure: /%postname%/ # applied only at time of WP install and when `site_install: true`
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+      provider: self-signed
+    cache:
+      enabled: false
+      duration: 30s
+    env:
+      disable_wp_cron: true
+      wp_home: http://staydry-old.dev
+      wp_siteurl: http://staydry-old.dev/wp
+      wp_env: development
+      db_name: staydry_old_dev
+      db_user: staydry_old_dev_dbuser
+      # db_password: (defined in group_vars/development/vault.yml)
   hollyandjohn.ca:
     site_hosts:
       - hollyandjohn.dev
