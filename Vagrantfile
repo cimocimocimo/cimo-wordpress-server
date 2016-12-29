@@ -136,13 +136,17 @@ Vagrant.configure('2') do |config|
       # loop over the sites and backup their databases
       wordpress_sites.each_pair do |name, site|
         db_name  = site['env']['db_name']
-        datetime_stamp = DateTime.now().strftime('%F-%T')
+        datetime_stamp = DateTime.now().strftime('%F-%H%M%S')
         info "Exporting database #{db_name}."
-        run_remote "
-        cd /srv/www/#{name}/current/
-        mkdir -p backups
-        wp db export backups/#{datetime_stamp}_#{db_name}-backup.sql --allow-root
-        "
+        begin
+          run_remote "
+          cd /srv/www/#{name}/current/
+          mkdir -p backups
+          wp db export backups/#{datetime_stamp}_#{db_name}-backup.sql --allow-root
+          "
+        rescue
+          info "Error backing up database #{db_name}."
+        end
       end
     end
   else
