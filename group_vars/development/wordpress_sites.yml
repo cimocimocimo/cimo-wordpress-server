@@ -106,3 +106,30 @@ wordpress_sites:
       wp_env: development
       db_name: hollyandjohn_dev
       db_user: hollyandjohn_dev_dbuser
+
+  yunustech.ca:
+    site_hosts:
+      - yunustech.dev
+    local_path: ../../Sites/yunustech.ca
+    site_install: true
+    site_title: Yunustech Site
+    # db_import: ../../Sites/sqldumps/hollyandjohn.sql
+    admin_user: admin
+    admin_email: aaron@cimolini.com
+    initial_permalink_structure: /%postname%/ # applied only at time of WP install and when `site_install: true`
+    multisite:
+      enabled: false
+      subdomains: false
+    ssl:
+      enabled: false
+    cache:
+      enabled: false
+      duration: 30s
+    env:
+      disable_wp_cron: true
+      wp_home: http://yunustech.dev
+      wp_siteurl: http://yunustech.dev/wp
+      wp_env: development
+      db_name: yunustech_dev
+      db_user: yunustech_dev_dbuser
+
