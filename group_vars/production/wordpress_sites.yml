@@ -21,8 +21,8 @@ wordpress_sites:
       duration: 30s
     env:
       disable_wp_cron: true
-      wp_home: http://www.staydrysystems.com
-      wp_siteurl: http://www.staydrysystems.com/wp
+      wp_home: http://staydrysystems.com
+      wp_siteurl: http://staydrysystems.com/wp
       wp_env: production
       db_name: staydry_prod_db
       db_user: staydry_prod_dbuser
