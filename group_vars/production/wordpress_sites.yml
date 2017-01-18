@@ -5,9 +5,10 @@
 wordpress_sites:
   staydrysystems.com:
     site_hosts:
-      - staydrysystems.com
-      - www.staydrysystems.com
-      - staydry-production.cimolini.com
+      - canonical: staydrysystems.com
+        redirects:
+          - www.staydrysystems.com
+          - staydry-production.cimolini.com
     local_path: ../../Sites/staydrysystems.com # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:cimocimocimo/staydrysystems.com.git
     branch: master

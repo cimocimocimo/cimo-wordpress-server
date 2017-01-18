@@ -5,7 +5,9 @@
 wordpress_sites:
   staydrysystems.com:
     site_hosts:
-      - staydry.dev
+      - canonical: staydry.dev
+          - www.staydry.dev
+
     local_path: ../../Sites/staydrysystems.com # path targeting local Bedrock site directory (relative to Ansible root)
     site_install: true
     site_title: StayDry Systems
