@@ -6,132 +6,71 @@ wordpress_sites:
   staydrysystems.com:
     site_hosts:
       - canonical: staydry.dev
+        redirects:
           - www.staydry.dev
 
     local_path: ../../Sites/staydrysystems.com # path targeting local Bedrock site directory (relative to Ansible root)
     site_install: true
     site_title: StayDry Systems
-    admin_user: admin
-    # admin_password: (defined in group_vars/development/vault.yml)
     admin_email: aaron@cimolini.com
-    initial_permalink_structure: /%postname%/ # applied only at time of WP install and when `site_install: true`
     multisite:
       enabled: false
     ssl:
       enabled: false
-      provider: self-signed
     cache:
       enabled: false
-      duration: 30s
     env:
-      disable_wp_cron: true
-      wp_home: http://staydry.dev
-      wp_siteurl: http://staydry.dev/wp
       wp_env: development
       db_name: staydry_dev
       db_user: staydry_dev_dbuser
-      # db_password: (defined in group_vars/development/vault.yml)
-  staydry-old.com:
-    site_hosts:
-      - staydry-old.dev
-    local_path: ../../Sites/staydry-old.com # path targeting local Bedrock site directory (relative to Ansible root)
-    site_install: true
-    site_title: StayDry Systems
-    admin_user: admin
-    # admin_password: (defined in group_vars/development/vault.yml)
-    admin_email: aaron@cimolini.com
-    initial_permalink_structure: /%postname%/ # applied only at time of WP install and when `site_install: true`
-    multisite:
-      enabled: false
-    ssl:
-      enabled: false
-      provider: self-signed
-    cache:
-      enabled: false
-      duration: 30s
-    env:
-      disable_wp_cron: true
-      wp_home: http://staydry-old.dev
-      wp_siteurl: http://staydry-old.dev/wp
-      wp_env: development
-      db_name: staydry_old_dev
-      db_user: staydry_old_dev_dbuser
-      # db_password: (defined in group_vars/development/vault.yml)
-  staydry-older.com:
-    site_hosts:
-      - staydry-older.dev
-    local_path: ../../Sites/staydry-older.com # path targeting local Bedrock site directory (relative to Ansible root)
-    site_install: true
-    site_title: StayDry Systems
-    admin_user: admin
-    # admin_password: (defined in group_vars/development/vault.yml)
-    admin_email: aaron@cimolini.com
-    initial_permalink_structure: /%postname%/ # applied only at time of WP install and when `site_install: true`
-    multisite:
-      enabled: false
-    ssl:
-      enabled: false
-      provider: self-signed
-    cache:
-      enabled: false
-      duration: 30s
-    env:
-      disable_wp_cron: true
-      wp_home: http://staydry-older.dev
-      wp_siteurl: http://staydry-older.dev/wp
-      wp_env: development
-      db_name: staydry_older_dev
-      db_user: staydry_older_dev_dbuser
-      # db_password: (defined in group_vars/development/vault.yml)
+
   hollyandjohn.ca:
     site_hosts:
-      - hollyandjohn.dev
+      - canonical: hollyandjohn.dev
     local_path: ../../Sites/hollyandjohn.ca
     site_install: true
     site_title: Holly & John Real Estate
-    # db_import: ../../Sites/sqldumps/hollyandjohn.sql
-    admin_user: admin
     admin_email: aaron@cimolini.com
-    initial_permalink_structure: /%postname%/ # applied only at time of WP install and when `site_install: true`
     multisite:
       enabled: false
-      subdomains: false
     ssl:
       enabled: false
     cache:
       enabled: false
-      duration: 30s
     env:
-      disable_wp_cron: true
-      wp_home: http://hollyandjohn.dev
-      wp_siteurl: http://hollyandjohn.dev/wp
       wp_env: development
       db_name: hollyandjohn_dev
       db_user: hollyandjohn_dev_dbuser
 
-  yunustech.ca:
+  yunustech.com:
     site_hosts:
-      - yunustech.dev
-    local_path: ../../Sites/yunustech.ca
-    site_install: true
+      - canonical: yunustech.dev
+    local_path: ../../Sites/yunustech.com/local/
     site_title: Yunustech Site
-    # db_import: ../../Sites/sqldumps/hollyandjohn.sql
-    admin_user: admin
     admin_email: aaron@cimolini.com
-    initial_permalink_structure: /%postname%/ # applied only at time of WP install and when `site_install: true`
     multisite:
       enabled: false
-      subdomains: false
     ssl:
       enabled: false
     cache:
       enabled: false
-      duration: 30s
     env:
-      disable_wp_cron: true
-      wp_home: http://yunustech.dev
-      wp_siteurl: http://yunustech.dev/wp
       wp_env: development
       db_name: yunustech_dev
       db_user: yunustech_dev_dbuser
 
+  hollyharper.com:
+    site_hosts:
+      - canonical: hollyharper.dev
+    local_path: ../../Sites/hollyharper.com/
+    admin_email: aaron@cimolini.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+    cache:
+      enabled: false
+    site_title: Holly Harper Real Estate
+    env:
+      db_name: hollyharper_dev
+      db_user: hollyharper_dev_dbuser

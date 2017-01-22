@@ -45,7 +45,7 @@ wordpress_sites:
 
   hollyandjohn.ca:
     site_hosts:
-      - staging.hollyandjohn.ca
+      - canonical: staging.hollyandjohn.ca
     local_path: ../../Sites/hollyandjohn.ca
     repo: git@github.com:cimocimocimo/hollyandjohn.ca.git
     branch: master

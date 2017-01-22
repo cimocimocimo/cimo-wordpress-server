@@ -39,9 +39,10 @@ wordpress_sites:
       # nonce_salt:
   hollyandjohn.ca:
     site_hosts:
-      - hollyandjohn.ca
-      - www.hollyandjohn.ca
-      - production.hollyandjohn.ca
+      - canonical: hollyandjohn.ca
+        redirects:
+          - www.hollyandjohn.ca
+          - production.hollyandjohn.ca
     local_path: ../../Sites/hollyandjohn.ca
     repo: git@github.com:cimocimocimo/hollyandjohn.ca.git
     branch: master

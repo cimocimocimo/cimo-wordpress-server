@@ -39,6 +39,19 @@
       - ::1
       - localhost
 
+  - name: Add admin user
+    mysql_user:
+      name: admin
+      host: "{{ item }}"
+      password: "{{ mysql_root_password }}"
+      check_implicit_admin: yes
+      priv: '*.*:ALL,GRANT'
+      state: present
+    with_items:
+      - 127.0.0.1
+      - ::1
+      - localhost
+
   - name: Copy .my.cnf file with root password credentials.
     template:
       src: my.cnf.j2
