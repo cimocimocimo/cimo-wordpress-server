@@ -64,6 +64,7 @@ Vagrant.configure('2') do |config|
   if Vagrant.has_plugin?('vagrant-hostmanager') && !multisite_subdomains?(wordpress_sites)
     config.hostmanager.enabled = true
     config.hostmanager.manage_host = true
+    config.hostmanager.include_offline = true
     config.hostmanager.aliases = hostnames + redirects
   elsif Vagrant.has_plugin?('landrush') && multisite_subdomains?(wordpress_sites)
     config.landrush.enabled = true
