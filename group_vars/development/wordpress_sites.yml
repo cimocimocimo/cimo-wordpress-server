@@ -74,3 +74,19 @@ wordpress_sites:
     env:
       db_name: hollyharper_dev
       db_user: hollyharper_dev_dbuser
+
+  rodcointeriors.com:
+    site_hosts:
+      - canonical: rodco.dev
+    local_path: ../../Sites/rodcointeriors.com/
+    admin_email: aaron@cimolini.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+    cache:
+      enabled: false
+    site_title: Rodco Interiors
+    env:
+      db_name: rodcointeriors_dev
+      db_user: rodcointeriors_dev_dbuser
