@@ -42,23 +42,6 @@ wordpress_sites:
       db_name: hollyandjohn_dev
       db_user: hollyandjohn_dev_dbuser
 
-  yunustech.com:
-    site_hosts:
-      - canonical: yunustech.dev
-    local_path: ../../Sites/yunustech.com/local/
-    site_title: Yunustech Site
-    admin_email: aaron@cimolini.com
-    multisite:
-      enabled: false
-    ssl:
-      enabled: false
-    cache:
-      enabled: false
-    env:
-      wp_env: development
-      db_name: yunustech_dev
-      db_user: yunustech_dev_dbuser
-
   hollyharper.com:
     site_hosts:
       - canonical: hollyharper.dev
