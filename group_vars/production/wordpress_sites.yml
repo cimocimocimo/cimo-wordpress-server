@@ -34,6 +34,8 @@ wordpress_sites:
         redirects:
           - www.hollyandjohn.ca
           - production.hollyandjohn.ca
+          - hollyharper.com
+          - www.hollyharper.com
     local_path: ../../Sites/hollyandjohn.ca
     repo: git@github.com:cimocimocimo/hollyandjohn.ca.git
     branch: master
