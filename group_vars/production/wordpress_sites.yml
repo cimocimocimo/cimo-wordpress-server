@@ -54,21 +54,3 @@ wordpress_sites:
       wp_env: production
       db_name: hollyandjohn_production_db
       db_user: hollyandjohn_production_dbuser
-
-  hollyharper.com:
-    site_hosts:
-      - canonical: hollyharper.com
-        redirects:
-          - www.hollyharper.com
-    repo: git@github.com:cimocimocimo/hollyharper.com.git
-    admin_email: aaron@cimolini.com
-    multisite:
-      enabled: false
-    ssl:
-      enabled: false
-    cache:
-      enabled: false
-    site_title: Holly Harper Real Estate
-    env:
-      db_name: hollyharper_prod
-      db_user: hollyharper_prod_dbuser
