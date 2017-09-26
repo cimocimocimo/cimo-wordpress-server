@@ -48,8 +48,8 @@ wordpress_sites:
       duration: 30s
     env:
       disable_wp_cron: true
-      wp_home: http://hollyandjohn.ca
-      wp_siteurl: http://hollyandjohn.ca/wp
+      wp_home: http://hollyharper.com
+      wp_siteurl: http://hollyharper.com/wp
       wp_env: production
       db_name: hollyandjohn_production_db
       db_user: hollyandjohn_production_dbuser
