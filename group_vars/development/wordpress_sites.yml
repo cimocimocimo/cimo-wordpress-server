@@ -24,12 +24,12 @@ wordpress_sites:
       db_name: staydry_dev
       db_user: staydry_dev_dbuser
 
-  hollyandjohn.ca:
+  hollyharper.com:
     site_hosts:
-      - canonical: hollyandjohn.dev
+      - canonical: hollyharper.dev
     local_path: ../../Sites/hollyandjohn.ca
     site_install: true
-    site_title: Holly & John Real Estate
+    site_title: Holly Harper Real Estate
     admin_email: aaron@cimolini.com
     multisite:
       enabled: false
@@ -39,22 +39,6 @@ wordpress_sites:
       enabled: false
     env:
       wp_env: development
-      db_name: hollyandjohn_dev
-      db_user: hollyandjohn_dev_dbuser
-
-  hollyharper.com:
-    site_hosts:
-      - canonical: hollyharper.dev
-    local_path: ../../Sites/hollyharper.com/
-    admin_email: aaron@cimolini.com
-    multisite:
-      enabled: false
-    ssl:
-      enabled: false
-    cache:
-      enabled: false
-    site_title: Holly Harper Real Estate
-    env:
       db_name: hollyharper_dev
       db_user: hollyharper_dev_dbuser
 
