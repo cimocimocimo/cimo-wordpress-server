@@ -27,7 +27,7 @@ wordpress_sites:
   hollyharper.com:
     site_hosts:
       - canonical: hollyharper.dev
-    local_path: ../../Sites/hollyandjohn.ca
+    local_path: ../../Sites/hollyharper.com
     site_install: true
     site_title: Holly Harper Real Estate
     admin_email: aaron@cimolini.com

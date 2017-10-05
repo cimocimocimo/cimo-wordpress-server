@@ -35,8 +35,8 @@ wordpress_sites:
           - hollyandjohn.ca
           - www.hollyandjohn.ca
           - www.hollyharper.com
-    local_path: ../../Sites/hollyandjohn.ca
-    repo: git@github.com:cimocimocimo/hollyandjohn.ca.git
+    local_path: ../../Sites/hollyharper.com
+    repo: git@github.com:cimocimocimo/hollyharper.com.git
     branch: master
     multisite:
       enabled: false

@@ -43,11 +43,11 @@ wordpress_sites:
       # logged_in_salt:
       # nonce_salt:
 
-  hollyandjohn.ca:
+  hollyharper.com:
     site_hosts:
-      - canonical: staging.hollyandjohn.ca
-    local_path: ../../Sites/hollyandjohn.ca
-    repo: git@github.com:cimocimocimo/hollyandjohn.ca.git
+      - canonical: staging.hollyharper.com
+    local_path: ../../Sites/hollyharper.com
+    repo: git@github.com:cimocimocimo/hollyharper.com.git
     branch: master
 
     multisite:
@@ -63,8 +63,8 @@ wordpress_sites:
       duration: 30s
     env:
       disable_wp_cron: true
-      wp_home: http://staging.hollyandjohn.ca
-      wp_siteurl: http://staging.hollyandjohn.ca/wp
+      wp_home: http://staging.hollyharper.com
+      wp_siteurl: http://staging.hollyharper.com/wp
       wp_env: staging
       db_name: hollyandjohn_staging_db
       db_user: hollyandjohn_staging_dbuser
