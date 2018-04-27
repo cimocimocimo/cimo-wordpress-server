@@ -5,9 +5,9 @@
 wordpress_sites:
   staydrysystems.com:
     site_hosts:
-      - canonical: staydry.dev
+      - canonical: staydry.local
         redirects:
-          - www.staydry.dev
+          - www.staydry.local
 
     local_path: ../../Sites/staydrysystems.com # path targeting local Bedrock site directory (relative to Ansible root)
     site_install: true
@@ -26,7 +26,7 @@ wordpress_sites:
 
   hollyharper.com:
     site_hosts:
-      - canonical: hollyharper.dev
+      - canonical: hollyharper.local
     local_path: ../../Sites/hollyharper.com
     site_install: true
     site_title: Holly Harper Real Estate
@@ -44,7 +44,7 @@ wordpress_sites:
 
   rodcointeriors.com:
     site_hosts:
-      - canonical: rodco.dev
+      - canonical: rodco.local
     local_path: ../../Sites/rodcointeriors.com/
     admin_email: aaron@cimolini.com
     multisite:

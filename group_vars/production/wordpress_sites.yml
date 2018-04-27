@@ -8,7 +8,8 @@ wordpress_sites:
       - canonical: staydrysystems.com
         redirects:
           - www.staydrysystems.com
-          - staydry-production.cimolini.com
+          - staydryshowersystems.com
+          - www.staydryshowersystems.com
           - collapsiblewaterdam.com
           - www.collapsiblewaterdam.com
           - collapsiblewaterretainer.com
