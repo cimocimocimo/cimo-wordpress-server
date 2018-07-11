@@ -57,3 +57,19 @@ wordpress_sites:
     env:
       db_name: rodcointeriors_dev
       db_user: rodcointeriors_dev_dbuser
+
+  emma.cimolini.com:
+    site_hosts:
+      - canonical: emma.local
+    local_path: ../../Sites/emma.cimolini.com/
+    admin_email: aaron@cimolini.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+    cache:
+      enabled: false
+    site_title: Emma Harper-Cimolini
+    env:
+      db_name: emma_dev
+      db_user: emma_dev_user

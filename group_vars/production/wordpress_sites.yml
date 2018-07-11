@@ -20,15 +20,15 @@ wordpress_sites:
     multisite:
       enabled: false
     ssl:
-      enabled: false
-      provider: self-signed
+      enabled: true
+      provider: letsencrypt
     cache:
       enabled: true
       duration: 30s
     env:
       disable_wp_cron: true
-      wp_home: http://staydrysystems.com
-      wp_siteurl: http://staydrysystems.com/wp
+      wp_home: https://staydrysystems.com
+      wp_siteurl: https://staydrysystems.com/wp
       wp_env: production
       db_name: staydry_prod_db
       db_user: staydry_prod_dbuser
@@ -49,14 +49,61 @@ wordpress_sites:
       enabled: false
       subdomains: false
     ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: true
+      duration: 30s
+    env:
+      disable_wp_cron: true
+      wp_home: https://hollyharper.com
+      wp_siteurl: https://hollyharper.com/wp
+      wp_env: production
+      db_name: hollyandjohn_production_db
+      db_user: hollyandjohn_production_dbuser
+
+  emma.cimolini.com:
+    site_hosts:
+      - canonical: emma.cimolini.com
+    local_path: ../../Sites/emma.cimolini.com
+    repo: git@github.com:cimocimocimo/emma.cimolini.com.git
+    branch: master
+    multisite:
       enabled: false
+      subdomains: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: true
+      duration: 30s
+    env:
+      disable_wp_cron: true
+      wp_home: https://emma.cimolini.com
+      wp_siteurl: https://emma.cimolini.com/wp
+      wp_env: production
+      db_name: emma_production_db
+      db_user: emma_production_dbuser
+
+  rodcointeriors.com:
+    site_hosts:
+      - canonical: rodco.cimolini.com
+    local_path: ../../Sites/rodcointeriors.com
+    repo: git@github.com:cimocimocimo/rodcointeriors.com.git
+    branch: responsive-theme
+    admin_email: aaron@cimolini.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
     cache:
       enabled: false
       duration: 30s
     env:
       disable_wp_cron: true
-      wp_home: http://hollyharper.com
-      wp_siteurl: http://hollyharper.com/wp
+      wp_home: https://rodco.cimolini.com
+      wp_siteurl: https://rodco.cimolini.com/wp
       wp_env: production
-      db_name: hollyandjohn_production_db
-      db_user: hollyandjohn_production_dbuser
+      db_name: rodco_production_db
+      db_user: rodco_production_dbuser
