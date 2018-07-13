@@ -11,12 +11,7 @@
   stat:
     path: "{{ project_local_path }}/roles/build.yml"
   register: build_file
-- name: test is a test
-  debug:
-    var: build_file
-- name: test is a test
-  debug:
-    msg: "{{ project_local_path }}/roles/build.yml"
+  connection: local
 - name: Run theme build commands
   include_tasks: "{{ project_local_path }}/roles/build.yml"
   when: build_file.stat.exists
