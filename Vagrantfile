@@ -172,7 +172,7 @@ Vagrant.configure('2') do |config|
       info 'halt/suspend/destroy trigger called'
 
       # loop over the sites and backup their databases
-      wordpress_sites.each_pair do |name, site|
+      trellis_config.wordpress_sites.each_pair do |name, site|
         db_name  = site['env']['db_name']
         datetime_stamp = DateTime.now().strftime('%F-%H%M%S')
         info "Exporting database #{db_name}."
