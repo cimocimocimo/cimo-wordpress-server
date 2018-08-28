@@ -8,6 +8,48 @@ Ansible playbooks for setting up a LEMP stack for WordPress.
 - High-performance production servers
 - One-command deploys for your [Bedrock](https://roots.io/bedrock/)-based WordPress sites
 
+## Cimo WordPress Server
+
+This is my company hosting server with my current clients.
+
+### Cimo Specific Documentation
+
+#### Adding a new site
+
+1. Create empty directory. Name with the site domain name (this is a convention only).
+2. Create new bedrock project within new directory
+
+   $ composer create-project roots/bedrock .
+
+3. Create a new GitHub repo. Run commands inside the site directory.
+
+   $ git init .
+   $ hub create
+
+   The remotes this command creates do not work with my ssh config. Remove the
+   created remotes in next step.
+
+4. Remove incorrect origin and add correct origin master.
+
+   $ git remote remove origin
+   $ git remote add origin cimo-github:cimocimocimo/domain.com.git
+
+5. Initial git commit and push
+
+   $ git add *
+   $ git commit -m 'Initial project commit'
+   $ git push --set-upstream origin master
+
+6. Add this site to group_vars in Trellis server directory
+
+7. Run local and remote provisioning commands
+
+   $ vagrant reload && vagrant provision
+
+   Sometimes another reload is needed for config changes to take effect.
+   For the hostname to be added to /etc/hosts I think a vagrant halt && vagrant up
+   is required for the hostname to be added.
+
 ## What's included
 
 Trellis will configure a server with the following and more:

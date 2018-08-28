@@ -73,3 +73,35 @@ wordpress_sites:
     env:
       db_name: emma_dev
       db_user: emma_dev_user
+
+  victoriadahliasociety.org:
+    site_hosts:
+      - canonical: dahlia.local
+    local_path: ../../Sites/victoriadahliasociety.org/
+    admin_email: aaron@cimolini.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+    cache:
+      enabled: false
+    site_title: Victoria Dahlia Society
+    env:
+      db_name: dahlia_dev
+      db_user: dahlia_dev_user
+
+  trevorball.com:
+    site_hosts:
+      - canonical: trevor.local
+    local_path: ../../Sites/trevorball.com/
+    admin_email: aaron@cimolini.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+    cache:
+      enabled: false
+    site_title: Trevor Ball Photography
+    env:
+      db_name: trevor_ball_dev
+      db_user: trevor_ball_dev_user
