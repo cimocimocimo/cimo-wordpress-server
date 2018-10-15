@@ -105,3 +105,19 @@ wordpress_sites:
     env:
       db_name: trevor_ball_dev
       db_user: trevor_ball_dev_user
+
+  catfoodpuzzles.com:
+    site_hosts:
+      - canonical: catfoodpuzzles.local
+    local_path: ../../Sites/catfoodpuzzles.com/
+    admin_email: aaron@cimolini.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+    cache:
+      enabled: false
+    site_title: Cat Food Puzzles
+    env:
+      db_name: catfoodpuzzles_dev
+      db_user: catfoodpuzzles_dev_user

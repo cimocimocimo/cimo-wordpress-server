@@ -21,9 +21,11 @@ This is my company hosting server with my current clients.
 
    $ composer create-project roots/bedrock .
 
-3. Create a new GitHub repo. Run commands inside the site directory.
+3. Create a new GitHub repo. Run commands inside the site directory. Also ensure
+   Your github ssh key is added to your environment (optional).
 
    $ git init .
+   $ ssh-add ~/.ssh/[github-key-name]
    $ hub create
 
    The remotes this command creates do not work with my ssh config. Remove the
@@ -40,15 +42,67 @@ This is my company hosting server with my current clients.
    $ git commit -m 'Initial project commit'
    $ git push --set-upstream origin master
 
-6. Add this site to group_vars in Trellis server directory
+6. Add the site config to the wordpress_sites.yml file in the appropriate ./group_vars/[environment] directory.
+
+   - For a local development site you only need to add it to wordpress_sites.yaml in the devlopment directory.
+   - Make sure to add passwords/salts to the vault.yaml using ansible-vault from the server root
+   $ ansible-vault edit group_vars/[environment]/vault.yml
 
 7. Run local and remote provisioning commands
 
-   $ vagrant reload && vagrant provision
+   - Local command:
+   $ vagrant halt && vagrant up && vagrant provision
 
-   Sometimes another reload is needed for config changes to take effect.
-   For the hostname to be added to /etc/hosts I think a vagrant halt && vagrant up
-   is required for the hostname to be added.
+   Do not use vagrant reload, it does not add the new domain name to the hosts
+   file. A full halt and up are required for those changes.
+
+   - Remote provision, for both staging and production environments:
+   $ ansible-playbook server.yml -e env=[environment]
+
+#### Deploy to an existing site on Production
+
+1. Deploy latest code to tracked branch
+
+   The tracked branch is set in group_vars/[environment]/wordpress_sites.yml
+   in the key 'branch'.
+
+   Add the ssh keys required for access to github and to the server. Then run
+   this command from the root of the server directory.
+
+   $ ./bin/deploy.sh [environment] [domain.name]
+
+2. Push new uploads from development if needed.
+
+   $ ansible-playbook uploads.yml -i hosts/[environment] \
+     --extra-vars="site=[domain.name] mode=push"
+
+   Note: Push for sending files to the remote server. Pull for pulling them down
+   to the local development server.
+
+3. Deploy DB changes if needed.
+
+   $ vagrant ssh
+
+   Commands to run in the vagrant instance.
+
+   Change to the root of the site directory.
+
+   $ cd /srv/www/[domain.name]/current
+
+   Run wp-cli export command
+
+   $ wp db export
+
+   Upload and import the .sql file to the target database and server. I usually
+   do this with Sequel Pro.
+
+   Change the local development domain name to the production domain name in the
+   database with wp-cli
+
+   $ wp search-replace '[development.domain.name]' '[production.domain.name]'
+
+ansible-playbook uploads.yml -i hosts/production --extra-vars="site=rodcointeriors.com mode=push"
+
 
 ## What's included
 
