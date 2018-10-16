@@ -107,26 +107,3 @@ wordpress_sites:
       wp_env: production
       db_name: rodco_production_db
       db_user: rodco_production_dbuser
-
-  trevorball.com:
-    site_hosts:
-      - canonical: trevor.cimolini.com
-    local_path: ../../Sites/trevorball.com
-    repo: git@github.com:cimocimocimo/trevorball.com.git
-    branch: master
-    admin_email: aaron@cimolini.com
-    multisite:
-      enabled: false
-    ssl:
-      enabled: false
-      provider: letsencrypt
-    cache:
-      enabled: false
-      duration: 30s
-    env:
-      disable_wp_cron: true
-      wp_home: http://trevor.cimolini.com
-      wp_siteurl: https://trevor.cimolini.com/wp
-      wp_env: production
-      db_name: trevor_production_db
-      db_user: trevor_production_dbuser
