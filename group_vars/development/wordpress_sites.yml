@@ -24,6 +24,19 @@ wordpress_sites:
       db_name: staydry_dev
       db_user: staydry_dev_dbuser
 
+  staydrydev.com:
+    site_hosts:
+      - canonical: staydrydev.local
+    local_path: ../../Sites/staydrydev.com
+    site_title: StayDry Shower Systems
+    admin_email: aaron@cimolini.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+    cache:
+      enabled: false
+
   hollyharper.com:
     site_hosts:
       - canonical: hollyharper.local
