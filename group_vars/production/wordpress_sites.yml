@@ -107,3 +107,22 @@ wordpress_sites:
       wp_env: production
       db_name: rodco_production_db
       db_user: rodco_production_dbuser
+
+  staydrydev.com:
+    site_hosts:
+      - canonical: staydry.cimolini.com
+    local_path: ../../Sites/staydrydev.com
+    repo: git@github.com:cimocimocimo/staydrydev.com.git
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+    cache:
+      enabled: false
+    env:
+      disable_wp_cron: true
+      wp_home: http://staydry.cimolini.com
+      wp_siteurl: http://staydry.cimolini.com/wp
+      wp_env: production
+      db_name: staydry_production_db
+      db_user: staydry_production_dbuser
