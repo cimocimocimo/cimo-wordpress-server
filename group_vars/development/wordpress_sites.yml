@@ -36,6 +36,10 @@ wordpress_sites:
       enabled: false
     cache:
       enabled: false
+    env:
+      wp_env: development
+      db_name: staydrydev_com_development
+      db_user: staydrydev_com
 
   hollyharper.com:
     site_hosts:
@@ -134,3 +138,19 @@ wordpress_sites:
     env:
       db_name: catfoodpuzzles_dev
       db_user: catfoodpuzzles_dev_user
+
+  blog.cimolini.com:
+    site_hosts:
+      - canonical: blog.cimolini.local
+    local_path: ../../Sites/blog.cimolini.com/
+    admin_email: aaron@cimolini.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+    cache:
+      enabled: false
+    site_title: Cimo Web Design & Development Blog
+    env:
+      db_name: blogcimolini_dev
+      db_user: blogcimolini_dev_user

@@ -87,10 +87,13 @@ wordpress_sites:
 
   rodcointeriors.com:
     site_hosts:
-      - canonical: rodco.cimolini.com
+      - canonical: rodcointeriors.com
+        redirects:
+          - www.rodcointeriors.com
+          - rodco.cimolini.com
     local_path: ../../Sites/rodcointeriors.com
     repo: git@github.com:cimocimocimo/rodcointeriors.com.git
-    branch: responsive-theme
+    branch: master
     admin_email: aaron@cimolini.com
     multisite:
       enabled: false
@@ -98,12 +101,12 @@ wordpress_sites:
       enabled: true
       provider: letsencrypt
     cache:
-      enabled: false
+      enabled: true
       duration: 30s
     env:
       disable_wp_cron: true
-      wp_home: https://rodco.cimolini.com
-      wp_siteurl: https://rodco.cimolini.com/wp
+      wp_home: https://rodcointeriors.com
+      wp_siteurl: https://rodcointeriors.com/wp
       wp_env: production
       db_name: rodco_production_db
       db_user: rodco_production_dbuser
