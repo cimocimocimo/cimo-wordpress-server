@@ -38,10 +38,6 @@ wordpress_sites:
       - canonical: hollyharper.com
         redirects:
           - www.hollyharper.com
-          - hollyandjohn.ca
-          - www.hollyandjohn.ca
-          - johnwest.ca
-          - www.johnwest.ca
     local_path: ../../Sites/hollyharper.com
     repo: git@github.com:cimocimocimo/hollyharper.com.git
     branch: master
